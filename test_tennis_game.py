@@ -3,6 +3,11 @@ from tennis_game import Tennis
 
 
 class tennisTestCase(unittest.TestCase):
+    def test_LoveAll(self):
+        tennis = Tennis()
+        actual = tennis.score()
+        self.assertEqual(actual, 'Love All')
+
     def test_FifteenAll(self):
         tennis = Tennis()
         tennis.first_player_score()

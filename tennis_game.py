@@ -10,6 +10,8 @@ class Tennis():
         self.secondPlayerScoreTimes = self.secondPlayerScoreTimes + 1
 
     def score(self):
+        if self.firstPlayerScoreTimes == 0 and self.secondPlayerScoreTimes == 0:
+            return "Love All"
         if self.firstPlayerScoreTimes == 1 and self.secondPlayerScoreTimes == 1:
             return "Fifteen All"
         if self.firstPlayerScoreTimes == 2 and self.secondPlayerScoreTimes == 2:
