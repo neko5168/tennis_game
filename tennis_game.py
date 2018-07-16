@@ -21,3 +21,13 @@ class Tennis():
 
         if self.firstPlayerScoreTimes == 1 and self.secondPlayerScoreTimes == 0:
             return "Fifteen Love"
+        if self.firstPlayerScoreTimes == 2 and self.secondPlayerScoreTimes == 0:
+            return "Thirty Love"
+        if self.firstPlayerScoreTimes == 3 and self.secondPlayerScoreTimes == 0:
+            return "Forty Love"
+
+        if self.firstPlayerScoreTimes == 0 and self.secondPlayerScoreTimes == 1:
+            return "Love Fifteen"
+        if self.firstPlayerScoreTimes == 0 and self.secondPlayerScoreTimes == 2:
+            return "Love Thirty"
+
