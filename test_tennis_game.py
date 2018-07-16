@@ -35,6 +35,17 @@ class tennisTestCase(unittest.TestCase):
         actual = tennis.score()
         self.assertEqual(actual, 'Deuce')
 
+    def test_Love_FifteenLove(self):
+        tennis = Tennis()
+        tennis.first_player_score()
+        actual = tennis.score()
+        self.assertEqual(actual, 'Fifteen Love')
+
+    def test_ThirtyLove(self):
+        tennis = Tennis()
+        tennis.second_player_score()
+        actual = tennis.score()
+        self.assertEqual(actual, 'Thirty Love')
 
 
 
