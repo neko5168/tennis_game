@@ -93,6 +93,18 @@ class tennisTestCase(unittest.TestCase):
         actual = tennis.score()
         self.assertEqual(actual, 'Tom Adv')
 
+    def test_JoeyWin(self):
+        tennis = Tennis()
+        tennis.first_player_score()
+        tennis.first_player_score()
+        tennis.first_player_score()
+        tennis.first_player_score()
+        tennis.first_player_score()
+        tennis.second_player_score()
+        tennis.second_player_score()
+        tennis.second_player_score()
+        actual = tennis.score()
+        self.assertEqual(actual, 'Joey Win')
 
 
 if __name__ == '__main__':

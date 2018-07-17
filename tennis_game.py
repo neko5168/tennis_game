@@ -35,4 +35,6 @@ class Tennis():
             return "Joey Adv"
         if self.firstPlayerScoreTimes == 3 and self.secondPlayerScoreTimes == 4:
             return "Tom Adv"
+        if self.firstPlayerScoreTimes == 5 and self.secondPlayerScoreTimes == 3:
+            return "Joey Win"
 
