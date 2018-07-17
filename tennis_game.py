@@ -9,15 +9,16 @@ class Tennis():
     def second_player_score(self):
         self.secondPlayerScoreTimes = self.secondPlayerScoreTimes + 1
 
-    def score(self):
-        if self.firstPlayerScoreTimes == 0 and self.secondPlayerScoreTimes == 0:
-            return "Love All"
-        if self.firstPlayerScoreTimes == 1 and self.secondPlayerScoreTimes == 1:
-            return "Fifteen All"
-        if self.firstPlayerScoreTimes == 2 and self.secondPlayerScoreTimes == 2:
-            return "Thirty All"
-        if self.firstPlayerScoreTimes == 3 and self.secondPlayerScoreTimes == 3:
+    def score_all(self):
+        list = ["Love", "Fifteen", "Thirty"]
+        if self.firstPlayerScoreTimes < 3:
+            return list[self.firstPlayerScoreTimes] + " All"
+        else:
             return "Deuce"
+
+    def score(self):
+        if self.firstPlayerScoreTimes == self.secondPlayerScoreTimes:
+            return self.score_all()
 
         if self.firstPlayerScoreTimes == 1 and self.secondPlayerScoreTimes == 0:
             return "Fifteen Love"
