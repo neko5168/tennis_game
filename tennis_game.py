@@ -31,3 +31,8 @@ class Tennis():
         if self.firstPlayerScoreTimes == 0 and self.secondPlayerScoreTimes == 2:
             return "Love Thirty"
 
+        if self.firstPlayerScoreTimes == 4 and self.secondPlayerScoreTimes == 3:
+            return "Joey Adv"
+        if self.firstPlayerScoreTimes == 3 and self.secondPlayerScoreTimes == 4:
+            return "Tom Adv"
+
