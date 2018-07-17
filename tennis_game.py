@@ -2,6 +2,7 @@ class Tennis():
     def __init__(self):
         self.firstPlayerScoreTimes = 0
         self.secondPlayerScoreTimes = 0
+        self.list = ["Love", "Fifteen", "Thirty", "Forty"]
 
     def first_player_score(self):
         self.firstPlayerScoreTimes = self.firstPlayerScoreTimes + 1
@@ -10,15 +11,21 @@ class Tennis():
         self.secondPlayerScoreTimes = self.secondPlayerScoreTimes + 1
 
     def score_all(self):
-        list = ["Love", "Fifteen", "Thirty"]
         if self.firstPlayerScoreTimes < 3:
-            return list[self.firstPlayerScoreTimes] + " All"
+            return self.list[self.firstPlayerScoreTimes] + " All"
         else:
             return "Deuce"
+
+    def score_love(self):
+        if self.secondPlayerScoreTimes == 0:
+            return self.list[self.firstPlayerScoreTimes] + " Love"
 
     def score(self):
         if self.firstPlayerScoreTimes == self.secondPlayerScoreTimes:
             return self.score_all()
+
+        if self.secondPlayerScoreTimes == 0:
+            return self.score_love()
 
         if self.firstPlayerScoreTimes == 1 and self.secondPlayerScoreTimes == 0:
             return "Fifteen Love"
