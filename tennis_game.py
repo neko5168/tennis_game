@@ -17,8 +17,10 @@ class Tennis():
             return "Deuce"
 
     def score_love(self):
-        if self.secondPlayerScoreTimes == 0:
-            return self.list[self.firstPlayerScoreTimes] + " Love"
+        return self.list[self.firstPlayerScoreTimes] + " Love"
+
+    def love_score(self):
+        return "Love " + self.list[self.secondPlayerScoreTimes]
 
     def score(self):
         if self.firstPlayerScoreTimes == self.secondPlayerScoreTimes:
@@ -27,17 +29,8 @@ class Tennis():
         if self.secondPlayerScoreTimes == 0:
             return self.score_love()
 
-        if self.firstPlayerScoreTimes == 1 and self.secondPlayerScoreTimes == 0:
-            return "Fifteen Love"
-        if self.firstPlayerScoreTimes == 2 and self.secondPlayerScoreTimes == 0:
-            return "Thirty Love"
-        if self.firstPlayerScoreTimes == 3 and self.secondPlayerScoreTimes == 0:
-            return "Forty Love"
-
-        if self.firstPlayerScoreTimes == 0 and self.secondPlayerScoreTimes == 1:
-            return "Love Fifteen"
-        if self.firstPlayerScoreTimes == 0 and self.secondPlayerScoreTimes == 2:
-            return "Love Thirty"
+        if self.firstPlayerScoreTimes == 0:
+            return self.love_score()
 
         if self.firstPlayerScoreTimes == 4 and self.secondPlayerScoreTimes == 3:
             return "Joey Adv"
